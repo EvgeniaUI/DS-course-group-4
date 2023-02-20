@@ -9,20 +9,20 @@
 
 #### Описание полей
 
-* age (numeric): количество полных лет
-* job : тип занимаемой должности (categorical: 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')
-* marital : семейное положение (categorical: 'divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)
-* education (categorical: 'basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown')
-* default: имеется ли любой вид кредитования? (categorical: 'no','yes','unknown')
-* housing: имеется ли ипотека? (categorical: 'no','yes','unknown')
-* loan: имеется ли персональный кредит? (categorical: 'no','yes','unknown')
-* contact: вид контакта с клиентом (categorical: 'cellular','telephone')
-* month: в каком месяце было сделано предыдущее предложение (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
-* day: день недели было предыдущее предложение (categorical: 'mon','tue','wed','thu','fri')
-* duration: продолжительность предыдущего общения в секундах. Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.
-* campaign: количество контактов по этой маркетинговой кампании с этим клиентов(numeric, includes last contact)
-* pdays: количество дней, прошедших с предыдущего предложения(число; 999 означает, что раньше не предлагали)
-* previous: количество контактов с этим лиентов в другие маркетинговые кампании(numeric)
-* poutcome: результат предыдущего предложения (categorical: 'failure','nonexistent','success')
-* balance - закодированное название личной числовой характеристики клиента
-
+* deposit, (yes/no). Открыл ли клиент срочный депозит?
+* age, numerical. Количество полных лет.
+* job, categorical. Тип занимаемой должности ('admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown').
+* marital, categorical. Cемейное положение ('divorced','married','single','unknown'; note: 'divorced' means divorced or widowed).
+* education, categorical. Образование ('secondary','tertiary','primary','unknown').
+* default, categorical. Имеется ли любой вид кредитования? ('no','yes','unknown').
+* housing, categorical. Имеется ли ипотека? ('no','yes','unknown').
+* loan, categorical. Имеется ли персональный кредит? ('no','yes','unknown')
+* contact, categorical. Вид контакта с клиентом ('cellular','telephone','unknown').
+* month, categorical. В каком месяце было сделано предыдущее предложение ('jan', 'feb', 'mar', ..., 'nov', 'dec').
+* day, categorical. День недели было предыдущее предложение ('mon','tue','wed','thu','fri')
+* duration, numerical. Продолжительность предыдущего общения в секундах. Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.
+* campaign, numerical. Количество контактов по этой маркетинговой кампании с этим клиентов (includes last contact).
+* pdays, numerical. Количество дней, прошедших с предыдущего предложения (число; -1 означает, что раньше не предлагали).
+* previous, numerical. Количество контактов с этим клиентом в другие маркетинговые кампании.
+* poutcome, categorical. Результат предыдущего предложения ('failure','other','success','unknown').
+* balance, numerical. Закодированное название личной числовой характеристики клиента. (Кажется, это просто баланс на счете)
